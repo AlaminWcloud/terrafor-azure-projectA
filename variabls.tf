@@ -7,7 +7,7 @@ variable "rescource_group_name" {
 variable "virtual_network_name" {
   description = "virtual network name"
   type        = string
-  default = "vnet-projectA-dev-uks-001"
+  default     = "vnet-projectA-dev-uks-001"
 
 }
 
@@ -16,12 +16,12 @@ variable "address_prefixes" {
   default = ["10.0.0.0/24", "10.0.1.0/24"]
 }
 variable "address_space" {
-    type = set(string)
-    default = [ "10.0.0.0/16" ]
-  
+  type    = set(string)
+  default = ["10.0.0.0/16"]
+
 }
 variable "location" {
-    type = string
-    default = "uk south"
-  
+  type    = string
+  default = "uk south"
+
 }
