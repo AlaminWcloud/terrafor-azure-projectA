@@ -38,3 +38,12 @@ variable "linux_vm_name" {
   description = "the name of the linux machine"
   type = string
 }
+variable "source_image_reference" {
+  type = map(string)
+  default = {
+    publisher = "Canonical"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "server"
+    version   = "latest"
+  }
+}
