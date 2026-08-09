@@ -20,9 +20,9 @@ resource "azurerm_linux_virtual_machine" "vm-linux-dev-uks-001" {
   ]
 
   admin_ssh_key {
-    username   = var.admin_username
-    public_key = var.admin_ssh_public_key_path
-  }
+  username   = var.admin_username
+  public_key = file(var.admin_ssh_public_key_path)
+}
 
   os_disk {
   caching              = var.os_disk.caching
