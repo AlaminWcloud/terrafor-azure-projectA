@@ -25,3 +25,7 @@ variable "location" {
   default = "uk south"
 
 }
+variable "linux_vm_subnet_name" {
+  type = string
+  default = "Vm-subnet"
+}
