@@ -29,3 +29,12 @@ variable "linux_vm_subnet_name" {
   type = string
   default = "Vm-subnet"
 }
+variable "linux_vm_nic_name" {
+  type = string
+  default = "vm-linux-nic-dev-uks-001"
+  
+}
+variable "linux_vm_name" {
+  description = "the name of the linux machine"
+  type = string
+}
