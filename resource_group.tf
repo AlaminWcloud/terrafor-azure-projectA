@@ -4,6 +4,6 @@ resource "azurerm_resource_group" "rg-projectA-dev-uks-001" {
 
   tags = {
     "name"       = "projectA"
-    "enviroment" = "dev"
+    "enviroment" = "dev" 
   }
 }

@@ -20,19 +20,19 @@ resource "azurerm_linux_virtual_machine" "vm-linux-dev-uks-001" {
   ]
 
   admin_ssh_key {
-    username   = "adminuser"
-    public_key = file("/Users/macbook/.ssh/azure_vm_key.pub")
+    username   = var.admin_username
+    public_key = var.admin_ssh_public_key_path
   }
 
   os_disk {
-    caching              = "ReadWrite"
-    storage_account_type = "Standard_LRS"
-  }
+  caching              = var.os_disk.caching
+  storage_account_type = var.os_disk.storage_account_type
+}
 
   source_image_reference {
-    publisher = "Canonical"
-    offer     = "ubuntu-24_04-lts"
-    sku       = "server"
-    version   = "latest"
-  }
+  publisher = var.source_image_reference["publisher"]
+  offer     = var.source_image_reference["offer"]
+  sku       = var.source_image_reference["sku"]
+  version   = var.source_image_reference["version"]
+}
 }

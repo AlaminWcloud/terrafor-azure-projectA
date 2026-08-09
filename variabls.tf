@@ -38,6 +38,8 @@ variable "linux_vm_name" {
   description = "the name of the linux machine"
   type = string
 }
+
+
 variable "source_image_reference" {
   type = map(string)
   default = {
@@ -45,5 +47,25 @@ variable "source_image_reference" {
     offer     = "ubuntu-24_04-lts"
     sku       = "server"
     version   = "latest"
+  }
+}
+variable "admin_username" {
+  type    = string
+  default = "adminuser"
+}
+
+variable "admin_ssh_public_key_path" {
+  type = string
+}
+
+variable "os_disk" {
+  type = object({
+    caching              = string
+    storage_account_type = string
+  })
+
+  default = {
+    caching              = "ReadWrite"
+    storage_account_type = "Standard_LRS"
   }
 }
