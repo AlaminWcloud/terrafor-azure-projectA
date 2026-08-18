@@ -24,7 +24,7 @@ resource "azurerm_virtual_machine_data_disk_attachment" "data-disk-1" {
 }
 
 resource "azurerm_virtual_machine_data_disk_attachment" "data-disk-2" {
-  managed_disk_id    = azurerm_managed_disk.data-disk-1.disk_access_id
+  managed_disk_id    = azurerm_managed_disk.data-disk-2.id
   virtual_machine_id = azurerm_linux_virtual_machine.vm-linux-dev-uks-001.id
   lun                = "20"
   caching            = "ReadWrite"
