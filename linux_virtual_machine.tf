@@ -35,4 +35,4 @@ resource "azurerm_linux_virtual_machine" "vm-linux-dev-uks-001" {
   sku       = var.source_image_reference["sku"]
   version   = var.source_image_reference["version"]
 }
-}
+
