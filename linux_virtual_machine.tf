@@ -1,4 +1,4 @@
-resource "azurerm_network_interface" "vm-linux-nic-dev-uks-001" {
+resource "azurerm_network_interface" "vm_linux_nic_dev_uks_001" {
   name                = var.linux_vm_nic_name
   location            = azurerm_resource_group.rg-projectA-dev-uks-001.location
   resource_group_name = azurerm_resource_group.rg-projectA-dev-uks-001.name
@@ -10,7 +10,7 @@ resource "azurerm_network_interface" "vm-linux-nic-dev-uks-001" {
   }
 }
 
-resource "azurerm_linux_virtual_machine" "vm-linux-dev-uks-001" {
+resource "azurerm_linux_virtual_machine" "vm_linux_dev_uks_001" {
   name                = var.linux_vm_name
   resource_group_name = azurerm_resource_group.rg-projectA-dev-uks-001.name
   location            = azurerm_resource_group.rg-projectA-dev-uks-001.location
