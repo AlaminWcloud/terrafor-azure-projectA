@@ -9,6 +9,7 @@ resource "azurerm_network_interface" "vm-linux-nic-dev-uks-001" {
     private_ip_address_allocation = "Dynamic"
   }
 }
+
 resource "azurerm_linux_virtual_machine" "vm-linux-dev-uks-001" {
   name                = var.linux_vm_name
   resource_group_name = azurerm_resource_group.rg-projectA-dev-uks-001.name
@@ -35,4 +36,4 @@ resource "azurerm_linux_virtual_machine" "vm-linux-dev-uks-001" {
   sku       = var.source_image_reference["sku"]
   version   = var.source_image_reference["version"]
 }
-
+}
